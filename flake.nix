@@ -18,6 +18,8 @@
         "build" "npx quartz build --directory ~/Muistiinpanot";
       apps.x86_64-linux.serve = mkNodejsApp
         "build" "npx quartz build --directory ~/Muistiinpanot --serve";
+      apps.x86_64-linux.sync = mkNodejsApp
+        "sync" "npx quartz sync";
       devShells.x86_64-linux = {
         default = pkgs.mkShell {
           packages = [ pkgs.nodejs_20 ];
